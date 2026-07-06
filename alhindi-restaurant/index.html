@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>مطعم الهندي - مشويات • كريب • بروست</title>
+  <meta name="description" content="مطعم الهندي - أجود المشويات على الفحم بطعم لا يقاوم." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+
+<canvas id="particles-canvas"></canvas>
+
+<nav class="navbar">
+  <div class="nav-brand">
+    <img src="images/logo.png" alt="مطعم الهندي" class="nav-logo" />
+    <span class="nav-title">مطعم الهندي</span>
+  </div>
+  <div class="nav-links">
+    <a href="/alhindi/" class="active">الرئيسية</a>
+    <a href="menu.html">المنيو</a>
+    <a href="#features">مميزاتنا</a>
+    <a href="#location">تواصل معنا</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:1rem;">
+    <button id="cart-btn">🛒 السلة<span id="cart-badge"></span></button>
+    <div class="hamburger"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+
+<div class="mobile-menu">
+  <a href="/alhindi/">🏠 الرئيسية</a>
+  <a href="menu.html">🍽️ المنيو</a>
+  <a href="#features">⭐ مميزاتنا</a>
+  <a href="#location">📍 تواصل معنا</a>
+</div>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-badge">🔥 أجود المشويات على الفحم</div>
+    <img src="images/logo.png" alt="مطعم الهندي" class="hero-logo logo-img" />
+    <h1 class="hero-title fire-text">مطعم الهندي</h1>
+    <p class="hero-sub">مشويات • كريب • <span>سندوتشات</span> • بروست<br/>طعم لا يقاوم — مشوي على الفحم بالأصالة</p>
+    <div class="hero-btns">
+      <a href="menu.html" class="btn-primary hero-btn">🍽️ اطلب دلوقتي</a>
+      <a href="#about" class="btn-outline">تعرف علينا أكتر</a>
+    </div>
+  </div>
+  <div class="hero-scroll"><span>اسكرول للأسفل</span><div class="scroll-dot"></div></div>
+</section>
+
+<!-- ===== FOOD SHOWCASE SLIDER ===== -->
+<section class="food-showcase" id="food-showcase">
+
+  <div class="showcase-slides">
+
+    <div class="showcase-slide active" data-kb="1">
+      <div class="slide-kenburns" style="background-image:url(images/food-slide1.jpg)"></div>
+      <div class="slide-gradient"></div>
+      <div class="slide-content">
+        <span class="slide-tag">🥙 كريب الهندي</span>
+        <h2 class="slide-heading">كريب<br/><em>يشد قلبك</em></h2>
+        <p class="slide-sub">جبنة سائحة، صوص رهيب، لحمة طرية — التجربة اللي بتدوّخك</p>
+        <a href="menu.html#كريب" class="slide-cta">اطلب دلوقتي <span>←</span></a>
+      </div>
+      <div class="slide-num"><span class="slide-cur">01</span><span class="slide-sep">/</span><span class="slide-tot">05</span></div>
+    </div>
+
+    <div class="showcase-slide" data-kb="2">
+      <div class="slide-kenburns" style="background-image:url(images/food-slide2.jpg)"></div>
+      <div class="slide-gradient"></div>
+      <div class="slide-content">
+        <span class="slide-tag">🔥 ميكس اللحوم</span>
+        <h2 class="slide-heading">الملكي<br/><em>على أصوله</em></h2>
+        <p class="slide-sub">ميكس سجق ولحمة مشوية في كريب ذهبي مقرمش</p>
+        <a href="menu.html#كريب" class="slide-cta">اطلب دلوقتي <span>←</span></a>
+      </div>
+      <div class="slide-num"><span class="slide-cur">02</span><span class="slide-sep">/</span><span class="slide-tot">05</span></div>
+    </div>
+
+    <div class="showcase-slide" data-kb="3">
+      <div class="slide-kenburns" style="background-image:url(images/food-slide3.jpg)"></div>
+      <div class="slide-gradient"></div>
+      <div class="slide-content">
+        <span class="slide-tag">🍗 بانيه فريش</span>
+        <h2 class="slide-heading">مقرمش<br/><em>لحد آخر نفس</em></h2>
+        <p class="slide-sub">بانيه فراخ طازج مقلي طازة — هيبقى حاجتك الأثيرة</p>
+        <a href="menu.html#كريب" class="slide-cta">اطلب دلوقتي <span>←</span></a>
+      </div>
+      <div class="slide-num"><span class="slide-cur">03</span><span class="slide-sep">/</span><span class="slide-tot">05</span></div>
+    </div>
+
+    <div class="showcase-slide" data-kb="4">
+      <div class="slide-kenburns" style="background-image:url(images/food-slide4.jpg)"></div>
+      <div class="slide-gradient"></div>
+      <div class="slide-content">
+        <span class="slide-tag">🍔 برجر الهندي</span>
+        <h2 class="slide-heading">برجر<br/><em>على أعلى مستوى</em></h2>
+        <p class="slide-sub">دبل باتي، جبنة شيدر، وصوص سيكريت بيتعمل عندنا بس</p>
+        <a href="menu.html#سندوتشات" class="slide-cta">اطلب دلوقتي <span>←</span></a>
+      </div>
+      <div class="slide-num"><span class="slide-cur">04</span><span class="slide-sep">/</span><span class="slide-tot">05</span></div>
+    </div>
+
+    <div class="showcase-slide" data-kb="5">
+      <div class="slide-kenburns" style="background-image:url(images/كريب\ براند.jpg)"></div>
+      <div class="slide-gradient"></div>
+      <div class="slide-content">
+        <span class="slide-tag">👑 كريب ميكس </span>
+        <h2 class="slide-heading">طعم<br/><em>على أصوله</em></h2>
+        <p class="slide-sub">الهندي بيقدملك تجربة أكل ما تنساهاش — خامة عالية وطعم أصلي</p>
+        <a href="menu.html" class="slide-cta">شوف المنيو الكامل <span>←</span></a>
+      </div>
+      <div class="slide-num"><span class="slide-cur">05</span><span class="slide-sep">/</span><span class="slide-tot">05</span></div>
+    </div>
+
+  </div>
+
+  <!-- arrows -->
+  <button class="showcase-arrow sc-prev" aria-label="السابق">
+    <svg viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+  </button>
+  <button class="showcase-arrow sc-next" aria-label="التالي">
+    <svg viewBox="0 0 24 24"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+
+  <!-- dots + progress bar -->
+  <div class="showcase-footer">
+    <div class="showcase-dots">
+      <button class="sc-dot active" data-idx="0"></button>
+      <button class="sc-dot" data-idx="1"></button>
+      <button class="sc-dot" data-idx="2"></button>
+      <button class="sc-dot" data-idx="3"></button>
+      <button class="sc-dot" data-idx="4"></button>
+    </div>
+    <div class="sc-progress-wrap"><div class="sc-progress-bar"></div></div>
+  </div>
+
+</section>
+
+<section class="stats-section" id="about">
+  <div class="stats-grid stagger-children">
+    <div class="stat-item reveal"><span class="stat-icon">🔥</span><span class="stat-num" data-count="5000" data-suffix="+">0</span><span class="stat-label">عميل سعيد</span></div>
+    <div class="stat-item reveal"><span class="stat-icon">🍽️</span><span class="stat-num" data-count="40" data-suffix="+">0</span><span class="stat-label">صنف في المنيو</span></div>
+    <div class="stat-item reveal"><span class="stat-icon">⭐</span><span class="stat-num" data-count="3" data-suffix=" سنوات">0</span><span class="stat-label">خبرة وتميز</span></div>
+    <div class="stat-item reveal"><span class="stat-icon">🚀</span><span class="stat-num" data-count="30" data-suffix=" دقيقة">0</span><span class="stat-label">أسرع توصيل</span></div>
+  </div>
+</section>
+
+<section class="section" id="menu-preview">
+  <div class="section-header">
+    <span class="section-tag">🍖 منيو مطعم الهندي</span>
+    <h2 class="section-title">اكتشف <span>تشكيلتنا</span> الكاملة</h2>
+    <div class="divider"><div class="divider-line"></div><span class="divider-icon">🔥</span><div class="divider-line"></div></div>
+    <p class="section-desc">من المشويات الفاخرة للكريب الطازج والسندوتشات اللذيذة — عندنا كل ما تحب</p>
+  </div>
+  <div class="menu-preview-grid">
+    <div class="menu-image-wrap reveal-left">
+      <div class="menu-full-image-wrapper">
+        <img src="images/المنيو.png" alt="منيو مطعم الهندي" class="menu-full-image" onclick="window.location.href='menu.html'" />
+      </div>
+    </div>
+    <div class="menu-categories-preview reveal-right stagger-children">
+      <a href="menu.html#مشويات" class="menu-cat-preview"><div class="menu-cat-icon">🔥</div><div class="menu-cat-info"><div class="menu-cat-name">المشويات</div><div class="menu-cat-count">7 أصناف — مشوي على الفحم الطبيعي</div></div><span class="menu-cat-arrow">‹</span></a>
+      <a href="menu.html#كريب" class="menu-cat-preview"><div class="menu-cat-icon">🥙</div><div class="menu-cat-info"><div class="menu-cat-name">الكريب</div><div class="menu-cat-count">13 صنف — كريب طازج متنوع</div></div><span class="menu-cat-arrow">‹</span></a>
+      <a href="menu.html#سندوتشات" class="menu-cat-preview"><div class="menu-cat-icon">🥪</div><div class="menu-cat-info"><div class="menu-cat-name">السندوتشات</div><div class="menu-cat-count">22 صنف — لكل ذوق صنف</div></div><span class="menu-cat-arrow">‹</span></a>
+      <a href="menu.html#حواوشي" class="menu-cat-preview"><div class="menu-cat-icon">🫓</div><div class="menu-cat-info"><div class="menu-cat-name">الحواوشي</div><div class="menu-cat-count">7 أصناف — حواوشي بلدي أصيل</div></div><span class="menu-cat-arrow">‹</span></a>
+      <a href="menu.html#وجبات" class="menu-cat-preview"><div class="menu-cat-icon">🍽️</div><div class="menu-cat-info"><div class="menu-cat-name">الوجبات</div><div class="menu-cat-count">6 وجبات — كاملة ومكتملة</div></div><span class="menu-cat-arrow">‹</span></a>
+      <a href="menu.html#بروست" class="menu-cat-preview"><div class="menu-cat-icon">🍗</div><div class="menu-cat-info"><div class="menu-cat-name">البروست</div><div class="menu-cat-count">✨ قريباً — ترقبوا الجديد</div></div><span class="menu-cat-arrow">‹</span></a>
+      <a href="menu.html#سوري" class="menu-cat-preview"><div class="menu-cat-icon">🌮</div><div class="menu-cat-info"><div class="menu-cat-name">السوري</div><div class="menu-cat-count"> افضل الميكسات السوري </div></div><span class="menu-cat-arrow">‹</span></a>
+
+    </div>
+  </div>
+  <div style="text-align:center;margin-top:3rem;"><a href="menu.html" class="btn-primary" style="display:inline-flex;">🍽️ شوف المنيو الكامل</a></div>
+</section>
+
+<section class="section" id="features" style="background:var(--bg-2);">
+  <div class="section-header">
+    <span class="section-tag">⭐ ليه مطعم الهندي؟</span>
+    <h2 class="section-title">مميزاتنا <span>اللي بتفرقنا</span></h2>
+    <div class="divider"><div class="divider-line"></div><span class="divider-icon">🌟</span><div class="divider-line"></div></div>
+  </div>
+  <div class="features-grid stagger-children">
+    <div class="feature-card reveal"><span class="feature-icon">🔥</span><h3 class="feature-title">مشوي على الفحم</h3><p class="feature-desc">كل أصناف المشويات بتتحضر على الفحم الطبيعي بطعم مميز لا يقاوم</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">🧑‍🍳</span><h3 class="feature-title">خامات أجود</h3><p class="feature-desc">بنستخدم أجود الخامات الطازجة يومياً عشان نضمنلك أحسن تجربة</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">🚀</span><h3 class="feature-title">توصيل سريع</h3><p class="feature-desc">خدمة توصيل سريعة لحد بابك في أقل وقت ممكن</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">💰</span><h3 class="feature-title">أسعار مناسبة</h3><p class="feature-desc">منيو متنوع بأسعار مناسبة لجميع الفئات — جودة عالية بسعر معقول</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">📲</span><h3 class="feature-title">طلب أونلاين</h3><p class="feature-desc">اطلب بسهولة من الموقع واختار تيك أواي أو ديليفري</p></div>
+    <div class="feature-card reveal"><span class="feature-icon">❤️</span><h3 class="feature-title">حب وشغف</h3><p class="feature-desc">بنحب الأكل ومشتاقين دايماً نقدم أحسن وجبة ليك وللعيلة</p></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-header">
+    <span class="section-tag">🍽️ وجبتنا المميزة</span>
+    <h2 class="section-title">وجبة <span>الهندي</span> الخاصة</h2>
+    <div class="divider"><div class="divider-line"></div><span class="divider-icon">👑</span><div class="divider-line"></div></div>
+  </div>
+  <div style="max-width:700px;margin:0 auto;text-align:center;">
+    <div class="feature-card reveal" style="padding:3rem 2rem;">
+      <span class="feature-icon" style="font-size:4rem;">👑</span>
+      <h3 class="feature-title shimmer-text" style="font-size:1.8rem;margin-bottom:1rem;">وجبة الهندي الخاصة</h3>
+      <p class="feature-desc" style="font-size:1.05rem;margin-bottom:2rem;">وجبتنا المميزة اللي بتجمع أحسن مشويات المطعم في صحن واحد — تجربة لا تُنسى</p>
+      <div style="display:flex;align-items:center;justify-content:center;gap:1rem;margin-bottom:2rem;">
+        <span style="font-size:2rem;font-weight:900;color:var(--gold);">180</span>
+        <span style="color:var(--text-muted);font-size:1rem;">جنيه فقط</span>
+      </div>
+      <a href="menu.html" class="btn-primary" style="display:inline-flex;margin:0 auto;">اطلبها دلوقتي 🔥</a>
+    </div>
+  </div>
+</section>
+
+<section class="section location-section" id="location">
+  <div class="section-header">
+    <span class="section-tag">📍 فين احنا</span>
+    <h2 class="section-title">موقعنا <span>وتواصل معنا</span></h2>
+    <div class="divider"><div class="divider-line"></div><span class="divider-icon">📍</span><div class="divider-line"></div></div>
+  </div>
+  <div class="location-content">
+    <div class="location-info">
+      <div class="location-card reveal"><div class="location-icon">📍</div><div class="location-text"><strong>العنوان</strong><span>طبهار، بجوار موقف الفيوم</span></div></div>
+      <div class="location-card reveal"><div class="location-icon">📱</div><div class="location-text"><strong>واتساب وهاتف</strong><span>01021171427</span></div></div>
+      <div class="location-card reveal"><div class="location-icon">🕐</div><div class="location-text"><strong>ساعات العمل</strong><span>يومياً من 10 صباحاً حتى 2 فجراً</span></div></div>
+      <div class="location-card reveal"><div class="location-icon">🚗</div><div class="location-text"><strong>خدمة التوصيل</strong><span>متاحة — سريعة ومضمونة</span></div></div>
+      <div style="margin-top:0.5rem;">
+        <a href="https://wa.me/201021171427" target="_blank" class="btn-primary" style="display:inline-flex;gap:8px;">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          تواصل على واتساب
+        </a>
+      </div>
+    </div>
+    <div class="location-map reveal-right">
+      <div class="map-placeholder">
+        <div class="map-pin">📍</div>
+        <div class="map-text">طبهار — بجوار موقف الفيوم</div>
+        <br/>
+        <a href="https://wa.me/201021171427?text=مرحبا، عايز أعرف العنوان" target="_blank" style="color:var(--primary);font-weight:700;font-size:0.9rem;">تواصل معنا للاتجاهات</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-content">
+    <div class="footer-brand">
+      <img src="images/logo.png" alt="مطعم الهندي" class="footer-logo" />
+      <p class="footer-desc">مطعم الهندي — أجود المشويات على الفحم الطبيعي. مشويات، كريب، سندوتشات، بروست.</p>
+      <div class="footer-social">
+        <a href="https://www.facebook.com/profile.php?id=61551249076031" target="_blank" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        </a>
+        <a href="https://wa.me/201021171427" target="_blank" class="social-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>روابط سريعة</h4>
+      <ul>
+        <li><a href="/alhindi/">الرئيسية</a></li>
+        <li><a href="menu.html">المنيو الكامل</a></li>
+        <li><a href="menu.html#مشويات">المشويات</a></li>
+        <li><a href="menu.html#وجبات">الوجبات</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>تواصل معنا</h4>
+      <ul>
+        <li><a href="https://wa.me/201021171427" target="_blank">📱 01021171427</a></li>
+        <li><a href="#">📍 طبهار — موقف الفيوم</a></li>
+        <li><a href="https://www.facebook.com/profile.php?id=61551249076031" target="_blank">📘 فيسبوك</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom"><p>© 2025 <span>مطعم الهندي</span> — جميع الحقوق محفوظة | مشويات • كريب • بروست</p></div>
+</footer>
+
+<div class="cart-overlay" id="cart-overlay">
+  <div class="cart-panel">
+    <div class="cart-header"><span class="cart-title">🛒 سلة الطلبات</span><button class="close-btn" id="close-cart-btn">✕</button></div>
+    <div class="cart-items" id="cart-items"></div>
+    <div class="cart-footer">
+      <div class="cart-total-row"><span class="cart-total-label">الإجمالي:</span><span class="cart-total-value"><span id="cart-total">0</span> <span class="cart-total-currency">جنيه</span></span></div>
+      <button id="checkout-btn">🎉 إتمام الطلب</button>
+    </div>
+  </div>
+</div>
+
+<div class="order-form-overlay" id="order-form-overlay">
+  <div class="order-form-panel">
+    <div class="form-header"><span class="form-title">📋 بيانات الطلب</span><button class="close-btn" id="close-form-btn">✕</button></div>
+    <form id="order-form">
+      <div class="order-type-btns">
+        <div class="order-type-btn"><input type="radio" name="order-type" id="takeaway" value="takeaway" checked /><label for="takeaway"><span class="order-type-icon">🏪</span>استلام من المطعم</label></div>
+        <div class="order-type-btn"><input type="radio" name="order-type" id="delivery" value="delivery" /><label for="delivery"><span class="order-type-icon">🛵</span>توصيل للبيت</label></div>
+      </div>
+      <div class="form-group"><label for="customer-name">الاسم الكريم *</label><input type="text" id="customer-name" placeholder="اكتب اسمك هنا..." required /></div>
+      <div class="form-group"><label for="customer-phone">رقم الهاتف *</label><input type="tel" id="customer-phone" placeholder="01XXXXXXXXX" required /></div>
+      <div id="delivery-fields">
+        <div class="form-group"><label for="customer-address">عنوان التوصيل *</label><textarea id="customer-address" rows="2" placeholder="اكتب عنوانك بالتفصيل..."></textarea></div>
+      </div>
+      <div class="form-group"><label for="order-notes">ملاحظات (اختياري)</label><textarea id="order-notes" rows="2" placeholder="أي تعليمات خاصة..."></textarea></div>
+      <button type="submit" id="submit-order-btn">✅ تأكيد الطلب</button>
+    </form>
+  </div>
+</div>
+
+<div class="success-modal" id="success-modal">
+  <div class="success-panel">
+    <span class="success-icon">🎉</span>
+    <h2 class="success-title">تم استلام طلبك بنجاح!</h2>
+    <p class="success-msg">جاري تجهيز طلبك الآن 🔥<br/>سيتم التواصل معك قريباً</p>
+    <div class="success-order-id">رقم الطلب: <span id="success-order-id"></span></div><br/>
+    <button id="close-success-btn">رائع! 👍</button>
+  </div>
+</div>
+
+<canvas id="confetti-canvas"></canvas>
+
+<a href="https://wa.me/201021171427?text=مرحبا مطعم الهندي، عايز أطلب" target="_blank" class="whatsapp-float">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <span class="whatsapp-tooltip">اطلب على واتساب</span>
+</a>
+
+<script src="js/menu-data.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/main.js"></script>
+<script src="js/showcase.js"></script>
+</body>
+</html>
