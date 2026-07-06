@@ -54,13 +54,7 @@ function buildItemCard(item, catIcon, query, idx) {
            onclick="addToCart('${item.id}','${escapeAttr(item.name)}',${item.price})">
         ${badgeHtml}
         <div class="item-img-wrap">
-          <div class="img-skeleton"></div>
-          <img class="item-img"
-               src="${item.img}"
-               alt="${escapeAttr(item.name)}"
-               loading="lazy"
-               onload="this.classList.add('img-loaded');var sk=this.previousElementSibling;if(sk&&sk.classList.contains('img-skeleton'))sk.remove();"
-               onerror="var sk=this.previousElementSibling;if(sk&&sk.classList.contains('img-skeleton'))sk.remove();this.classList.add('img-loaded');" />
+          <img src="${item.img}" alt="${escapeAttr(item.name)}" loading="lazy" />
         </div>
         <div class="item-body">
           <div class="item-name">${highlight(item.name, query)}</div>

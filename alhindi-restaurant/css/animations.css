@@ -244,18 +244,3 @@
   pointer-events: none;
   animation: none;
 }
-
-/* ===== SKELETON LOADING ===== */
-@keyframes skeletonShimmer {
-  0%   { background-position: 200% center; }
-  100% { background-position: -200% center; }
-}
-
-/* ===== ADD-BTN BOUNCE ===== */
-@keyframes addBtnPop {
-  0%   { transform: scale(1) rotate(0deg); }
-  40%  { transform: scale(1.28) rotate(10deg); }
-  70%  { transform: scale(0.9) rotate(-4deg); }
-  100% { transform: scale(1) rotate(0deg); }
-}
-.add-btn:active { animation: addBtnPop .35s cubic-bezier(.34,1.56,.64,1); }

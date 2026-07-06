@@ -27,7 +27,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
-  font-family: 'Cairo', sans-serif;
+  font-family: 'Cairo', 'Tajawal', sans-serif;
   background: var(--bg);
   color: var(--text);
   direction: rtl;
@@ -797,7 +797,7 @@ footer {
   padding: 2rem;
 }
 
-.category-section { margin-bottom: 4.5rem; }
+.category-section { margin-bottom: 3.5rem; }
 
 .category-title {
   display: flex;
@@ -832,7 +832,7 @@ footer {
 .items-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 1.6rem;
+  gap: 1.2rem;
 }
 
 /* ===== MENU ITEM CARD ===== */
@@ -861,9 +861,9 @@ footer {
 }
 
 .menu-item-card:hover {
-  border-color: rgba(230,57,70,0.55);
-  transform: translateY(-7px);
-  box-shadow: 0 18px 44px rgba(230,57,70,0.28), 0 0 0 1px rgba(230,57,70,0.1);
+  border-color: rgba(230,57,70,0.4);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(230,57,70,0.2);
 }
 
 .menu-item-card:hover::before { opacity: 1; }
@@ -1004,10 +1004,10 @@ footer {
 
 /* card body below image */
 .item-body {
-  padding: 1.25rem 1.25rem 1.1rem;
+  padding: 1rem 1rem .9rem;
   display: flex;
   flex-direction: column;
-  gap: .4rem;
+  gap: .3rem;
   flex: 1;
   background: var(--bg-card);
 }
@@ -1651,60 +1651,6 @@ footer {
   .cats-section { padding: 0.6rem 0.7rem; }
   .cat-tab { padding: 6px 11px; font-size: 0.78rem; }
 }
-
-/* =====================================================
-   SKELETON LOADING
-   ===================================================== */
-
-.img-skeleton {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  border-radius: inherit;
-  background: linear-gradient(90deg,
-    var(--bg-3) 25%,
-    #252525 50%,
-    var(--bg-3) 75%);
-  background-size: 300% 100%;
-  animation: skeletonShimmer 1.6s ease-in-out infinite;
-}
-
-.item-img-wrap .item-img {
-  opacity: 0;
-  transition: opacity 0.4s ease, transform 0.45s ease;
-  position: relative;
-  z-index: 2;
-}
-
-.item-img-wrap .item-img.img-loaded { opacity: 1; }
-
-/* =====================================================
-   ENHANCED CARD HOVER
-   ===================================================== */
-
-.menu-item-card.img-card:hover {
-  transform: translateY(-9px);
-  box-shadow:
-    0 24px 52px rgba(230,57,70,0.32),
-    0 0 0 1px rgba(230,57,70,0.18),
-    0 0 28px rgba(230,57,70,0.1);
-}
-
-.menu-item-card.img-card:hover .item-img-wrap img {
-  transform: scale(1.1);
-}
-
-.add-btn:hover {
-  transform: scale(1.18) rotate(8deg);
-  box-shadow: 0 6px 22px rgba(230,57,70,0.55);
-}
-
-.item-footer {
-  margin-top: .85rem;
-  padding-top: .75rem;
-}
-
-.menu-items-section { padding: 2.5rem 2rem; }
 
 /* =====================================================
    FOOD SHOWCASE SLIDER
